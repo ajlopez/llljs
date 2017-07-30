@@ -25,3 +25,14 @@ exports['parse one digit integer'] = function (test) {
 	test.equal(parser.parse(), null);
 };
 
+exports['parse atom'] = function (test) {
+	var parser = parsers.parser('foo');
+	
+	var expr = parser.parse();
+	
+	test.ok(expr);
+	test.equal(expr.toString(), 'foo');
+	
+	test.equal(parser.parse(), null);
+};
+
