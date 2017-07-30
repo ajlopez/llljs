@@ -60,3 +60,9 @@ exports['compile subtract three integers'] = function (test) {
 	
 	test.equal(result, '602a600204600704');
 };
+
+exports['compile nested arithmetic expressions'] = function (test) {
+	var result = lll.compile('(+ (* 21 2) (- 12 2))');
+	
+	test.equal(result, '6015600202600c60020301');
+};
