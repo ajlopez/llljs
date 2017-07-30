@@ -66,3 +66,9 @@ exports['compile nested arithmetic expressions'] = function (test) {
 	
 	test.equal(result, '6015600202600c60020301');
 };
+
+exports['compile seq of integers'] = function (test) {
+	var result = lll.compile('(seq 1 2 3)');
+	
+	test.equal(result, '600160026003');
+};
