@@ -1,12 +1,14 @@
 {
   "name": "llljs",
-  "description": "Yet another Solidity decompiler, WIP",
+  "description": "Simple Low-level Lisp-like Language compiler, WIP",
   "keywords": [
-    "solidity",
+    "lll",
+	"compiler",
+	"lisp"
     "ethereum",
     "smartcontract"
   ],
-  "version": "0.0.1alpha",
+  "version": "0.0.1beta",
   "author": "Angel 'Java' Lopez <webmaster@ajlopez.com> (http://www.ajlopez.com)",
   "repository": {
     "type": "git",
