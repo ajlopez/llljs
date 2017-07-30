@@ -36,3 +36,27 @@ exports['compile multiply three integers'] = function (test) {
 	
 	test.equal(result, '6001600202600302');
 };
+
+exports['compile subtract two integers'] = function (test) {
+	var result = lll.compile('(- 1 42)');
+	
+	test.equal(result, '6001602a03');
+};
+
+exports['compile subtract three integers'] = function (test) {
+	var result = lll.compile('(- 1 2 3)');
+	
+	test.equal(result, '6001600203600303');
+};
+
+exports['compile divide two integers'] = function (test) {
+	var result = lll.compile('(/ 42 2)');
+	
+	test.equal(result, '602a600204');
+};
+
+exports['compile subtract three integers'] = function (test) {
+	var result = lll.compile('(/ 42 2 7)');
+	
+	test.equal(result, '602a600204600704');
+};
