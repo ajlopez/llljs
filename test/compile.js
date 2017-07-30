@@ -25,3 +25,14 @@ exports['compile add three integers'] = function (test) {
 	test.equal(result, '6001600201600301');
 };
 
+exports['compile multiply two integers'] = function (test) {
+	var result = lll.compile('(* 1 42)');
+	
+	test.equal(result, '6001602a02');
+};
+
+exports['compile multiply three integers'] = function (test) {
+	var result = lll.compile('(* 1 2 3)');
+	
+	test.equal(result, '6001600202600302');
+};
