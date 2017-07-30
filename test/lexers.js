@@ -81,3 +81,39 @@ exports['get string'] = function (test) {
 	test.equal(lexer.nextToken(), null);
 };
 
+
+exports['get symbols'] = function (test) {
+	var lexer = lexers.lexer("([])'");
+	
+	var result = lexer.nextToken();
+	
+	test.ok(result);
+	test.equal(result.type, TokenType.Symbol);
+	test.equal(result.value, '(');
+	
+	var result = lexer.nextToken();
+	
+	test.ok(result);
+	test.equal(result.type, TokenType.Symbol);
+	test.equal(result.value, '[');
+	
+	var result = lexer.nextToken();
+	
+	test.ok(result);
+	test.equal(result.type, TokenType.Symbol);
+	test.equal(result.value, ']');
+	
+	var result = lexer.nextToken();
+	
+	test.ok(result);
+	test.equal(result.type, TokenType.Symbol);
+	test.equal(result.value, ')');
+	
+	var result = lexer.nextToken();
+	
+	test.ok(result);
+	test.equal(result.type, TokenType.Symbol);
+	test.equal(result.value, "'");
+	
+	test.equal(lexer.nextToken(), null);
+};
