@@ -105,7 +105,7 @@ exports['get string'] = function (test) {
 };
 
 exports['get symbols'] = function (test) {
-	var lexer = lexers.lexer("'+-*/");
+	var lexer = lexers.lexer("' + - * /");
 	
 	var result = lexer.nextToken();
 	
@@ -136,6 +136,42 @@ exports['get symbols'] = function (test) {
 	test.ok(result);
 	test.equal(result.type, TokenType.Symbol);
 	test.equal(result.value, "/");
+	
+	test.equal(lexer.nextToken(), null);
+};
+
+exports['get symbols with more than a character'] = function (test) {
+	var lexer = lexers.lexer("&& || <= >= !=");
+	
+	var result = lexer.nextToken();
+	
+	test.ok(result);
+	test.equal(result.type, TokenType.Symbol);
+	test.equal(result.value, '&&');
+	
+	var result = lexer.nextToken();
+	
+	test.ok(result);
+	test.equal(result.type, TokenType.Symbol);
+	test.equal(result.value, '||');
+	
+	var result = lexer.nextToken();
+	
+	test.ok(result);
+	test.equal(result.type, TokenType.Symbol);
+	test.equal(result.value, '<=');
+	
+	var result = lexer.nextToken();
+	
+	test.ok(result);
+	test.equal(result.type, TokenType.Symbol);
+	test.equal(result.value, '>=');
+	
+	var result = lexer.nextToken();
+	
+	test.ok(result);
+	test.equal(result.type, TokenType.Symbol);
+	test.equal(result.value, "!=");
 	
 	test.equal(lexer.nextToken(), null);
 };
