@@ -14,6 +14,29 @@ exports['get name'] = function (test) {
 	test.equal(lexer.nextToken(), null);
 };
 
+exports['get name skip comment'] = function (test) {
+	var lexer = lexers.lexer('; this is a comment\nfoo');
+	
+	var result = lexer.nextToken();
+	
+	test.ok(result);
+	test.equal(result.type, TokenType.Name);
+	test.equal(result.value, 'foo');
+	
+	test.equal(lexer.nextToken(), null);
+};
+
+exports['get name skip comment with carriage return'] = function (test) {
+	var lexer = lexers.lexer('; this is a comment\rfoo');
+	
+	var result = lexer.nextToken();
+	
+	test.ok(result);
+	test.equal(result.type, TokenType.Name);
+	test.equal(result.value, 'foo');
+	
+	test.equal(lexer.nextToken(), null);
+};
 
 exports['get two names'] = function (test) {
 	var lexer = lexers.lexer('foo bar');
