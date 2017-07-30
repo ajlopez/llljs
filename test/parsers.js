@@ -46,3 +46,14 @@ exports['parse string'] = function (test) {
 	
 	test.equal(parser.parse(), null);
 };
+
+exports['parse list'] = function (test) {
+	var parser = parsers.parser('(add 1 2)');
+	
+	var expr = parser.parse();
+	
+	test.ok(expr);
+	test.equal(expr.toString(), '(add 1 2)');
+	
+	test.equal(parser.parse(), null);
+};
