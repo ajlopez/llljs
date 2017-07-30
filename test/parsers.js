@@ -8,7 +8,7 @@ exports['parse integer'] = function (test) {
 	
 	test.ok(expr);
 	test.equal(expr.toString(), '42');
-	test.equal(expr.compile(), '2a');
+	test.equal(expr.toHex(), '2a');
 	
 	test.equal(parser.parse(), null);
 };
@@ -20,7 +20,7 @@ exports['parse one digit integer'] = function (test) {
 	
 	test.ok(expr);
 	test.equal(expr.toString(), '3');
-	test.equal(expr.compile(), '03');
+	test.equal(expr.toHex(), '03');
 	
 	test.equal(parser.parse(), null);
 };
