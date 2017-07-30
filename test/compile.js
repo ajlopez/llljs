@@ -19,3 +19,9 @@ exports['compile add two integers'] = function (test) {
 	test.equal(result, '6001602a01');
 };
 
+exports['compile add three integers'] = function (test) {
+	var result = lll.compile('(+ 1 2 3)');
+	
+	test.equal(result, '6001600201600301');
+};
+
