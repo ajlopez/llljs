@@ -16,7 +16,11 @@ TBD
 
 ## References
 
-TBD
+- [Proof of Concept 6](https://github.com/ethereum/cpp-ethereum/wiki/LLL-PoC-6/04fae9e627ac84d771faddcf60098ad09230ab58)
+- [Anyone have a copy of the old LLL tutorials?](https://www.reddit.com/r/ethereum/comments/3secu1/anyone_have_a_copy_of_the_old_lll_tutorials/)
+- [Compiling your first contract in LLL](https://media.consensys.net/compiling-your-first-contract-in-lll-28d5a9dd2e3a)
+- [Installing Ethereum Compilers](https://media.consensys.net/installing-ethereum-compilers-61d701e78f6)
+- [An Introduction to LLL for Ethereum Smart Contract Development](https://media.consensys.net/an-introduction-to-lll-for-ethereum-smart-contract-development-e26e38ea6c23)
 
 ## Samples
 
