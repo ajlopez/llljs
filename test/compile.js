@@ -13,6 +13,18 @@ exports['compile integer as push with two bytes'] = function (test) {
 	test.equal(result, '610100');
 };
 
+exports['compile and two integers'] = function (test) {
+	var result = lll.compile('(& 1 42)');
+	
+	test.equal(result, '6001602a16');
+};
+
+exports['compile and three integers'] = function (test) {
+	var result = lll.compile('(& 1 2 3)');
+	
+	test.equal(result, '6001600216600316');
+};
+
 exports['compile add two integers'] = function (test) {
 	var result = lll.compile('(+ 1 42)');
 	
