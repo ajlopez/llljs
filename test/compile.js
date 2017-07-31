@@ -73,8 +73,8 @@ exports['compile seq of integers'] = function (test) {
 	test.equal(result, '600160026003');
 };
 
-exports['compile if with then'] = function (test) {
-	var result = lll.compile('(if 1 (+ 3 4))');
+exports['compile when'] = function (test) {
+	var result = lll.compile('(when 1 (+ 3 4))');
 	
 	test.equal(result, '60011561000c5760036004015b');
 };
