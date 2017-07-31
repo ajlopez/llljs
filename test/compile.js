@@ -78,3 +78,9 @@ exports['compile if with then'] = function (test) {
 	
 	test.equal(result, '60011561000c5760036004015b');
 };
+
+exports['compile if with then and else'] = function (test) {
+	var result = lll.compile('(if 1 (+ 3 4) (+ 5 6)');
+	
+	test.equal(result, '600115610010576003600401610016565b60056006015b');
+};
