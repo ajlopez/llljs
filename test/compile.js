@@ -37,6 +37,18 @@ var result = lll.compile('(| 1 2 3)');
 	test.equal(result, '6001600217600317');
 };
 
+exports['compile binary xor two integers'] = function (test) {
+	var result = lll.compile('(^ 1 42)');
+	
+	test.equal(result, '6001602a18');
+};
+
+exports['compile binary xor three integers'] = function (test) {
+	var result = lll.compile('(^ 1 2 3)');
+	
+	test.equal(result, '6001600218600318');
+};
+
 exports['compile add two integers'] = function (test) {
 	var result = lll.compile('(+ 1 42)');
 	
