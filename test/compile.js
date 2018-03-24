@@ -130,6 +130,6 @@ exports['compile if with then and else'] = function (test) {
 exports['compile unless'] = function (test) {
 	var result = lll.compile('(unless 1 (+ 3 4))');
 	
-	test.equal(result, '60011561000b57610011565b60036004015b');
+	test.equal(result, '6001600a5760036004015b');
 };
 
