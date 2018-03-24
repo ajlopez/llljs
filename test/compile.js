@@ -25,6 +25,12 @@ exports['compile binary and three integers'] = function (test) {
 	test.equal(result, '6001600216600316');
 };
 
+exports['compile equal and two integers'] = function (test) {
+	var result = lll.compile('(= 1 2)');
+	
+	test.equal(result, '6001600214');
+};
+
 exports['compile binary or two integers'] = function (test) {
 	var result = lll.compile('(| 1 42)');
 	
